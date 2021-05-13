@@ -31,9 +31,12 @@
         let color = 'verd';
         let str_concat = str_color + ' ' + color;
         console.log(str_concat);
-        color = color.replace(/verd/, "blau");
-        let str_color_upd = str_color.replace(/o/g, "u");
-        console.log(str_color_upd + ' ' + color);
+        let str_color_upd = str_concat.replace(/verd/, 'blau');
+        console.log(str_color_upd);
+        str_color_upd = str_color_upd.replace(/o/g, "u");
+        console.log(str_color_upd);
+
+
 
     </script>
 </body>
