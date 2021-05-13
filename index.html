@@ -36,13 +36,34 @@
         // str_color_upd = str_color_upd.replace(/o/g, "u");
         // console.log(str_color_upd);
 
-        var list = ['taula', 'cadira', 'ordinador', 'llibreta'];
-        for (let i = 0; i < list.length; i++) {
-            const element = list[i];
-            console.log('L\'objecte ' + element + ' està a la posició ' + ' ' + i);
+        // var list = ['taula', 'cadira', 'ordinador', 'llibreta'];
+        // for (let i = 0; i < list.length; i++) {
+        //     const element = list[i];
+        //     console.log('L\'objecte ' + element + ' està a la posició ' + ' ' + i);
 
+        // }
+
+        function calculator(operator, n1, n2) {
+            let res;
+            if (operator == 'suma') {
+                res = n1 + n2;
+            } else if (operator == 'resta') {
+                res = n1 - n2;
+            } else if (operator == 'multiplica') {
+                res = n1 * n2;
+            } else if (operator == 'divide') {
+                if(!Number.isFinite(n1/n2)){
+                    return 'No se puede dividir por ZERO';
+                }
+                res = n1 / n2;
+            } else {
+                return 'El operador introducido no existe';
+            }
+            return res;
         }
 
+        let calc = calculator('divide', 35, 0);
+        console.log(calc);
 
 
     </script>
