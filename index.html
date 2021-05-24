@@ -5,14 +5,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS-1</title>
+    <title>Calculadora</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./bootstrap-4.6.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./fontawesome-free-5.15.3-web/css/all.css">
 </head>
 
-<body class="bg-dark">
-
-    <div class="container">
-
+<body class="bg-dark ">
+    <h1 class="title text-white text-center p-4">Calculadora</h1>
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="calculator card">
+            <table class="table-striped table-primary p-3">
+                <thead>
+                    <input type="text" class="calculator-screen" value="0" disabled />
+                </thead>
+                <tbody>
+                    <tr class="">
+                        <td class="p-1"><button class="btn btn-dark btn-lg btn-block" type="button"
+                                value="clear">C</button>
+                        </td>
+                        <td class="p-1"><button class="btn btn-dark btn-lg btn-block" type="button" value="backspace"><i
+                                    class="fas fa-backspace"></i></button></td>
+                        <td class="p-1"><button class="btn btn-dark btn-lg btn-block" id="btn-percent" type="button"
+                                value="%">%</button>
+                        </td>
+                        <td class="p-1"><button class="btn btn-dark btn-lg btn-block" id="btn-divide" type="button"
+                                value="/">÷</button>
+                        </td>
+                    </tr>
+                    <tr class="">
+                        <td class="p-1"><button class="btn btn-dark btn-lg btn-block" type="button" value="7">7</button>
+                        </td>
+                        <td class="p-1"><button class="btn btn-dark btn-lg btn-block" type="button" value="8">8</button>
+                        </td>
+                        <td class="p-1"><button class="btn btn-dark btn-lg btn-block" type="button" value="9">9</button>
+                        </td>
+                        <td class="p-1"><button class="btn btn-dark btn-lg btn-block" id="btn-multiply" type="button"
+                                value="*">&times;</button>
+                        </td>
+                    </tr>
+                    <tr class="">
+                        <td class="p-1"><button class="btn btn-dark btn-lg btn-block" type="button" value="4">4</button>
+                        </td>
+                        <td class="p-1"><button class="btn btn-dark btn-lg btn-block" type="button" value="5">5</button>
+                        </td>
+                        <td class="p-1"><button class="btn btn-dark btn-lg btn-block" type="button" value="6">6</button>
+                        </td>
+                        <td class="p-1"><button class="btn btn-dark btn-lg btn-block" type="button" value="-">-</button>
+                        </td>
+                    </tr>
+                    <tr class="">
+                        <td class="p-1"><button class="btn btn-dark btn-lg btn-block" type="button" value="1">1</button>
+                        </td>
+                        <td class="p-1"><button class="btn btn-dark btn-lg btn-block" type="button" value="2">2</button>
+                        </td>
+                        <td class="p-1"><button class="btn btn-dark btn-lg btn-block" type="button" value="3">3</button>
+                        </td>
+                        <td class="p-1"><button class="btn btn-dark btn-lg btn-block" id="btn-sum" type="button"
+                                value="+">+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p-1"><button class="btn btn-dark btn-lg btn-block" id="btn-decimal" type="button"
+                                value=".">.</button>
+                        </td>
+                        <td class="p-1"><button class="btn btn-dark btn-lg btn-block" type="button" value="0">0</button>
+                        </td>
+                        <td class="p-1" colspan="2"><button class="btn btn-dark btn-lg btn-block" id="btn-equal"
+                                type="button" value="result">=</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
+
+
     <script>
         // console.log('Hola Mundo!');
         // alert('Me llamo Oliver!');
@@ -56,7 +124,7 @@
             } else if (operator == 'multiplica') {
                 res = n1 * n2;
             } else if (operator == 'divide') {
-                if(!Number.isFinite(n1/n2)){
+                if (!Number.isFinite(n1 / n2)) {
                     return 'No se puede dividir por ZERO';
                 }
                 res = n1 / n2;
@@ -71,6 +139,10 @@
 
 
     </script>
+    <script src="./bootstrap-4.6.0-dist/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="./bootstrap-4.6.0-dist/js/popper.min.js"></script>
+    <script src="./bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
